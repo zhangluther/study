@@ -1,0 +1,37 @@
+﻿
+@model Views.Models.Person
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello @Model.FirstName</title>
+</head>
+<body>
+    <div> 
+        <h3>Details: </h3>
+        <div>
+            @Html.LabelFor(n => n.Surname)
+            @Html.DisplayFor(n => n.Surname)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.FirstName)
+            @Html.DisplayFor(m => m.FirstName)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Patronymic)
+            @Html.DisplayFor(m => m.Patronymic)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.BirthDate)
+        </div>
+        <div>
+            @Html.TextArea("Notes", "Please enter Notes", new { @class = "form-control", @rows="15",@nima="iud23" })
+        </div>
+    </div>
+</body>
+</html>
