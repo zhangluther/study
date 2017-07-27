@@ -1,8 +1,6 @@
 ﻿
 @model Views.Models.Person
-@{
-    Layout = null;
-}
+@{ Layout = null; }
 
 <!DOCTYPE html>
 
@@ -16,12 +14,18 @@
         <h3>Details: </h3>
         <div>
             @Html.LabelFor(n => n.Surname)
-            @Html.DisplayFor(n => n.Surname)
+            @{ Html.DisplayFor(n => n.Surname);}
         </div>
         <div>
-            @Html.LabelFor(m => m.FirstName)
-            @Html.DisplayFor(m => m.FirstName)
-        </div>
+            @{
+                <a href="#">HHHHHHH</a>
+              Html.LabelFor(m => m.FirstName);
+              Html.DisplayFor(m => m.FirstName);
+              <br/>
+              <label>你好</label>
+              }
+            
+        </div>    
         <div>
             @Html.LabelFor(m => m.Patronymic)
             @Html.DisplayFor(m => m.Patronymic)
